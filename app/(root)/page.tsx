@@ -1,7 +1,8 @@
-import Image from "next/image";
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export default function Home() {
-  return (
-  <><p>hello</p></>
-  );
-}
+const HomePage = async () => {
+  await delay(5000);
+  return <p>hello</p>;
+};
+
+export default HomePage;
