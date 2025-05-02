@@ -4,6 +4,8 @@ import Link from "next/link"
 import React from "react"
 import { UserIcon } from 'lucide-react';
 import { ShoppingCart } from 'lucide-react';
+import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import ModeToggle from "./mode_toggle";
 const Header = () => {
     return <>
         <header className="w-full border-b">
@@ -21,6 +23,9 @@ const Header = () => {
                 </Button>
                 </div>
                 <div className="space-x-2" >
+                <Button asChild variant="ghost" >
+                   <ModeToggle/>
+                    </Button>
                     <Button asChild variant="ghost" >
                         <Link href="/signin">  <UserIcon/> User
                         </Link>
