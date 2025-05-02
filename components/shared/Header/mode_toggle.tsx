@@ -6,7 +6,7 @@ import {
 import { useTheme } from "next-themes"
 import { SunIcon, MoonIcon, SunMoon } from 'lucide-react';
 import { useEffect, useState } from "react";
-
+import { Button } from "@/components/ui/button";
 
 const ModeToggle = () => {
 
@@ -23,8 +23,9 @@ const ModeToggle = () => {
     return (
         <>
             <DropdownMenu>
-                <DropdownMenuTrigger className="outline-none">
-                    {theme == "light" ? <SunIcon /> : (theme == "dark" ? <MoonIcon /> : <SunMoon />)}
+                <DropdownMenuTrigger asChild className="outline-none">
+                    <Button  variant={"ghost"}> {theme == "light" ? (<SunIcon />): theme == "dark" ? (<MoonIcon />) : (<SunMoon />)}</Button>
+                   
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                     <DropdownMenuLabel>
